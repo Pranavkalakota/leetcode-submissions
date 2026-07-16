@@ -13,6 +13,7 @@ class Solution {
                 writePointer++;
             }
         }
+        System.out.println(writePointer);
         return writePointer;
         /* while (readPointer < nums.length) {
             if (nums[readPointer] != val) {
