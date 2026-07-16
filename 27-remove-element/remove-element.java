@@ -6,10 +6,14 @@
 
 class Solution {
     public int removeElement(int[] nums, int val) {
-        Arrays.sort(nums);
-        // int readPointer = 0;
         int writePointer = 0;
-        int count = 0;
+        for (int readPointer = 0; readPointer < nums.length; readPointer++) {
+            if (nums[readPointer] != val) {
+                nums[writePointer] = nums[readPointer];
+                writePointer++;
+            }
+        }
+        return writePointer;
         /* while (readPointer < nums.length) {
             if (nums[readPointer] != val) {
                 readPointer++;
@@ -27,7 +31,7 @@ class Solution {
                 
 
             }
-        } */
+        }
         int j;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] == val) {
@@ -45,7 +49,8 @@ class Solution {
             } else {
                 count++;
             }
-        }
-        return count;
+        } */
+
+
     }
 }
